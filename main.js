@@ -59,10 +59,6 @@ var ACCEL = MAXDX * 2;
 var FRICTION = MAXDX * 6;
 var JUMP = METER * 1500;
 
-// load an image to draw
-var chuckNorris = document.createElement("img");
-chuckNorris.src = "hero.png";
-
 var player = new Player();
 var keyboard = new Keyboard();
 
@@ -128,6 +124,20 @@ function drawMap()
     }
 }
 
+function DrawLevelCollisionData(tileLayer) {
+    for (var y = 0; y <
+    level1.layer[tileLayer].height; y++) {
+        for (var x = 0; x <
+        level1.layer[tileLayer].width; x++) {
+            if(cells[tileLayer][y][x] == 1) {
+                context.fillStyle ="#f00";
+                contexy.fillRect(TILE*X,TILE*y,TILE,TILE);
+                
+            }
+        }
+    }
+}
+   
 var cells = [];
 function initialize() {
     for(var layerIdx = 0; layerIdx < LAYER_COUNT; layerIdx++) {
