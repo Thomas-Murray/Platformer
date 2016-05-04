@@ -124,19 +124,7 @@ function drawMap()
     }
 }
 
-function DrawLevelCollisionData(tileLayer) {
-    for (var y = 0; y <
-    level1.layer[tileLayer].height; y++) {
-        for (var x = 0; x <
-        level1.layer[tileLayer].width; x++) {
-            if(cells[tileLayer][y][x] == 1) {
-                context.fillStyle ="#f00";
-                contexy.fillRect(TILE*X,TILE*y,TILE,TILE);
-                
-            }
-        }
-    }
-}
+
    
 var cells = [];
 function initialize() {

@@ -191,4 +191,6 @@ Player.prototype.update = function(deltaTime)
 Player.prototype.draw = function()
 {
   this.sprite.draw(context, this.position.x, this.position.y);
+  context.fillStyle = "#F00";
+  context.fillRect(this.position.x,this.position.y,35,35);
 }
