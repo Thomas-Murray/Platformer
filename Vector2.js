@@ -3,10 +3,10 @@ var Vector2 = function (nX,nY) {
     this.y = canvas.height/2;
 }
 
-Vector2.prototype.set = function ()
+Vector2.prototype.set = function (nX,nY)
 {
-    var ny;
-    var nx;
+    this.x = nX;
+    this.y = nY;
 }
 
 Vector2.prototype.Magnitude = function ()

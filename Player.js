@@ -54,6 +54,7 @@ Player.prototype.update = function(deltaTime)
     var left = false;
     var right = false;
     var jump = false;
+    var falling = true;
     
     if(keyboard.isKeyDown(keyboard.KEY_LEFT) == true) {
         left = true;
@@ -191,6 +192,4 @@ Player.prototype.update = function(deltaTime)
 Player.prototype.draw = function()
 {
   this.sprite.draw(context, this.position.x, this.position.y);
-  context.fillStyle = "#F00";
-  context.fillRect(this.position.x,this.position.y,35,35);
 }

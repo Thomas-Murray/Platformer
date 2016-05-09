@@ -39,9 +39,10 @@ var fpsTime = 0;
 var SCREEN_WIDTH = canvas.width;
 var SCREEN_HEIGHT = canvas.height;
 
-var LAYER_COUNT = 2;
-var LAYER_PLATFORMS = 0;
-var LAYER_LADDERS = 1;
+var LAYER_COUNT = 3;
+var LAYER_BACKGROUND = 0;
+var LAYER_PLATFORMS = 1;
+var LAYER_LADDERS = 2;
 
 var MAP = {tw:60, th:15};
 var TILE = 35;
@@ -74,13 +75,13 @@ function cellAtPixelCoord(layer, x,y)
     return cellAtTileCoord(layer, p2t(x), p2t(y));
 };
 
-function cellAtTileCoord(layer, tx,ty)
+function cellAtTileCoord(layer, tx, ty)
 {
     if(tx<0 || tx>=MAP.tw || ty<0)
       return 1;
     if(ty>=MAP.th)
       return 0;
-    return cells[layer][ty][tx];
+    return cells[layer][tx][ty];
 };
 
 function tileToPixel(tile)
