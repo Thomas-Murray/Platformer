@@ -1,6 +1,4 @@
 var Vector2 = function (nX,nY) {
-    this.x = canvas.width/2;
-    this.y = canvas.height/2;
 }
 
 Vector2.prototype.set = function (nX,nY)

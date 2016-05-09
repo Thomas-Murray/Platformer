@@ -40,6 +40,8 @@ var Player = function()
    
     this.velocity = new Vector2();
    
+   this.velocity.set(0,0);
+   
     this.falling = true;
     this.jumping = false;
     
