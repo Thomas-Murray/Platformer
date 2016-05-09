@@ -54,7 +54,6 @@ Player.prototype.update = function(deltaTime)
     var left = false;
     var right = false;
     var jump = false;
-    var falling = true;
     
     if(keyboard.isKeyDown(keyboard.KEY_LEFT) == true) {
         left = true;

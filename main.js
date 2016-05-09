@@ -81,7 +81,7 @@ function cellAtTileCoord(layer, tx, ty)
       return 1;
     if(ty>=MAP.th)
       return 0;
-    return cells[layer][tx][ty];
+    return cells[layer][ty][tx];
 };
 
 function tileToPixel(tile)
