@@ -101,7 +101,7 @@ function bound(value, min, max)
     if(value > max)
       return max;
     return value;
-}
+}   
 
 function drawMap()
 {
@@ -123,9 +123,7 @@ function drawMap()
             }
         }
     }
-}
-
-
+} 
    
 var cells = [];
 function initialize() {
@@ -156,6 +154,7 @@ function run()
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	
 	var deltaTime = getDeltaTime();
+    
 	
     player.update(deltaTime);
     player.draw();
