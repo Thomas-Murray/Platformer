@@ -1,4 +1,6 @@
 var Vector2 = function (nX,nY) {
+    this.x = 0;
+    this.y = 0;
 }
 
 Vector2.prototype.set = function (nX,nY)

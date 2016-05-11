@@ -1,3 +1,4 @@
+
 var Frame = function(x, y, width, height, duration){
 	this.x = x;
 	this.y = y;
@@ -130,13 +131,12 @@ Sprite.prototype.draw = function(c, x, y) {
 	// width	Optional. The width of the image to use (stretch or reduce the image)	
 	// height	Optional. The height of the image to use (stretch or reduce the image)
 		
-	context.drawImage(this.image, 
+	c.drawImage(this.image, 
 			this.animations[this.currentAnimation][this.currentFrame].x,
 			this.animations[this.currentAnimation][this.currentFrame].y,
 			this.animations[this.currentAnimation][this.currentFrame].width,
 			this.animations[this.currentAnimation][this.currentFrame].height,
-			this.offsets[this.currentAnimation].x,
-            this.offsets[this.currentAnimation].y,
+			x+this.offsets[this.currentAnimation].x, y+this.offsets[this.currentAnimation].y,
 			this.animations[this.currentAnimation][this.currentFrame].width,
 			this.animations[this.currentAnimation][this.currentFrame].height);
 };
